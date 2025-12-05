@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            {% block content1 %}
+
+    <h1 style="background-color: aliceblue;color: aqua;text-align: center;">welcome to students page</h1>
+    {% block content2 %}
+    <table>
+        <tr>
+            <th><a href="edit_student_profile">edit profile</a></th>
+            <th><a href="view_teacher_student">view_teacher</a></th>
+            <th><a href="logouts">logouts</a></th>
+
+
+        </tr>
+    </table>
+{% endblock content2 %}
+
+</body>
+{% endblock content1 %}
+
+</html>

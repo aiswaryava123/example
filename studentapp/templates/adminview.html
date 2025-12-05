@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5" style="color: blue;">
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>email</th>
+            <th>adress</th>
+            <th>guardian</th>
+            <th>phonenumber</th>
+            <th>approve seller</th>
+            <th>delete seller</th>
+
+        </tr>
+        {% for i in views %}
+        <tr>
+            <td>{{i.student_id.first_name}}</td>
+            <td>{{i.student_id.last_name}}</td>
+            <td>{{i.student_id.email}}</td>
+            <td>{{i.student_id.adress}}</td>
+            <td>{{i.guardian}}</td>
+            <td>{{i.student_id.phone_number}}</td>
+            <td><a href="approve_student/{{i.id}}">approve</a></td>
+            <td><a href="delete/{{i.id}}">delete</a></td>
+        </tr>
+    </table>
+</body>
+</html>

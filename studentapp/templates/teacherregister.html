@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content2 %}
+    <h1 style="color:wheat;background-color: rebeccapurple;text-align: center;">Teacher registration</h1>
+    {% endblock content2 %}
+
+    {% block content1 %}
+
+        <form method="POST">
+        {% csrf_token %}
+        <label>firstname</label>
+        <input type="text" name="firstname" placeholder="firstname"><br><br>
+        <label>lastname</label>
+        <input type="text" name="lastname" placeholder="lastname"><br><br>
+        <label>address</label>
+        <input type="text" name="address" placeholder="address"><br><br>
+        <label>email</label>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <label>phonenumber</label>
+        <input type="number" name="phonenumber" placeholder="phonenumber"><br><br>
+        <label>username</label>
+        <input type="text" name="username" placeholder="username"><br><br>
+        <label>salary</label>
+        <input type="number" name="salary" placeholder="salary"><br><br>
+        <label>Experience</label>
+        <input type="number" name="Experience" placeholder="Experience"><br><br>
+        <label>password</label>
+        <input type="password" name="password" placeholder="password"><br><br>
+        <button type="submit" value="login">register</button>
+
+    </form>
+
+    {% endblock content1 %}
+</div>
+    
+</body>
+</html>
